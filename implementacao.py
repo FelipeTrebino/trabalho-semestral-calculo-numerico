@@ -234,6 +234,16 @@ if __name__  == "__main__":
 
     b4 = np.array([-2, 2, -3, -1,-20])
 
+    A5 = np.array([
+            [10, 2, 3, 0, 0, 1],
+            [1, 11, 1, 1, 0, 0],
+            [2, 1, 10, 2, 1, 0],
+            [0, 1, 2, 8, 1, 1],
+            [0, 0, 1, 1, 9, 1],
+            [1, 0, 0, 1, 1, 7]])
+
+    b5 = np.array([7, 13, 17, 19, 21, 23])
+
     print("1º Exemplo - Exercícios feito em sala \n")
 
     print_sistema(A1,b1)
@@ -263,5 +273,13 @@ if __name__  == "__main__":
     print_sistema(A4,b4)
 
     result = verificar_convergencia(A4,b4,tol=0.0001)
+    
+    formatar_resultado_convergencia(result)
+
+    print("\n5º Exemplo - Sistema 6 variaveis\n")
+
+    print_sistema(A5,b5)
+
+    result = verificar_convergencia(A5,b5,tol=0.0001)
     
     formatar_resultado_convergencia(result)
